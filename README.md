@@ -24,35 +24,24 @@
 
 ## Architecture
 
-┌─────────────────────────────────────────────────────┐
-│                  Attack Simulation Layer              │
-│         (Controlled TTPs on owned infrastructure)    │
-└─────────────────────┬───────────────────────────────┘
-│
-┌───────────▼───────────┐
-│    AWS CloudTrail     │
-│  (API Activity Logs)  │
-└───────────┬───────────┘
-│
-┌─────────────▼─────────────┐
-│      AWS GuardDuty        │
-│  (Managed Threat Detection)│
-└─────────────┬─────────────┘
-│
-┌─────────────▼─────────────┐
-│    AWS Security Hub       │
-│  (Centralized Findings)   │
-└─────────────┬─────────────┘
-│
-┌────────────────▼────────────────┐
-│   Python Detection Engine       │
-│   (boto3 + Custom Sigma Rules)  │
-└────────────────┬────────────────┘
-│
-┌─────────────▼─────────────┐
-│         Splunk            │
-│  (SIEM + Threat Hunting)  │
-└───────────────────────────┘
+```
+Attack Simulation Layer
+(Controlled TTPs on owned infrastructure)
+        |
+        v
+AWS CloudTrail  -->  Log Collection & API Activity Monitoring
+        |
+        v
+AWS GuardDuty  -->  Managed Threat Detection & Alerting
+        |
+        v
+AWS Security Hub  -->  Centralized Findings Aggregation
+        |
+        v
+Python Detection Engine  -->  boto3 + Custom Sigma Rules
+        |
+        v
+Splunk  -->  SIEM Visualization & Threat Hunting
 
 ---
 
@@ -70,35 +59,31 @@
 
 ## Repository Structure
 
+```
 aws-detection-lab/
-│
 ├── src/
 │   ├── detection_engine/     # Core detection logic
 │   ├── threat_hunting/       # Hunting scripts and notebooks
 │   └── utils/                # Shared utilities
-│
 ├── rules/
 │   ├── sigma/                # Sigma detection rules
 │   └── custom/               # Custom AWS-specific rules
-│
 ├── simulations/
 │   └── attack_scenarios/     # Documented attack simulations
-│
 ├── findings/
 │   ├── reports/              # Detection findings reports
 │   └── screenshots/          # Evidence screenshots
-│
 ├── diagrams/                 # Architecture diagrams
-├── docs/                     # Full documentation
+├── docs/
 │   ├── setup-guide.md        # Environment setup instructions
 │   ├── architecture.md       # Detailed architecture decisions
 │   ├── attack-scenarios.md   # Attack simulation documentation
 │   └── mitre-mapping.md      # Full MITRE ATT&CK mapping
-│
 ├── tests/                    # Unit tests
 ├── .env.example              # Environment variable template
 ├── requirements.txt          # Python dependencies
 └── DISCLAIMER.md             # Legal disclaimer
+```
 
 ---
 
