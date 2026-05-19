@@ -216,3 +216,30 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# AWS Credentials - never commit these
+.env
+*.csv
+.aws/
+credentials
+config
+
+# Secrets
+secrets.json
+*.key
+*.pem
+*.p12
+
+# Local environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/settings.json
+
+# Project specific
+findings/screenshots/*.png
+findings/screenshots/*.jpg
