@@ -23,7 +23,8 @@
 ---
 
 ## Architecture
-
+````
+````
 Attack Simulation Layer
 (Controlled TTPs on owned infrastructure)
 |
@@ -41,6 +42,8 @@ Python Detection Engine  -->  boto3 + Custom Sigma Rules
 |
 v
 Splunk  -->  SIEM Visualization & Threat Hunting
+````
+````
 
 ---
 
@@ -57,7 +60,8 @@ Splunk  -->  SIEM Visualization & Threat Hunting
 ---
 
 ## Repository Structure
-
+````
+````
 aws-detection-lab/
 ├── src/
 │   ├── detection_engine/     # Core detection logic
@@ -81,6 +85,8 @@ aws-detection-lab/
 ├── .env.example              # Environment variable template
 ├── requirements.txt          # Python dependencies
 └── DISCLAIMER.md             # Legal disclaimer
+````
+````
 
 ---
 
