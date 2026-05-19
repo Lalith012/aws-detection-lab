@@ -168,5 +168,4 @@ for full details.
 ## Author
 
 **Lalith**
-Cloud Security Engineer (Transitioning)
 [GitHub](https://github.com/Lalith012)
