@@ -24,23 +24,25 @@
 
 ## Architecture
 
+```
 Attack Simulation Layer
 (Controlled TTPs on owned infrastructure)
-|
-v
+        |
+        v
 AWS CloudTrail  -->  Log Collection & API Activity Monitoring
-|
-v
+        |
+        v
 AWS GuardDuty  -->  Managed Threat Detection & Alerting
-|
-v
+        |
+        v
 AWS Security Hub  -->  Centralized Findings Aggregation
-|
-v
+        |
+        v
 Python Detection Engine  -->  boto3 + Custom Sigma Rules
-|
-v
+        |
+        v
 Splunk  -->  SIEM Visualization & Threat Hunting
+```
 
 ---
 
@@ -58,6 +60,7 @@ Splunk  -->  SIEM Visualization & Threat Hunting
 
 ## Repository Structure
 
+```
 aws-detection-lab/
 ├── src/
 │   ├── detection_engine/     # Core detection logic
@@ -81,6 +84,7 @@ aws-detection-lab/
 ├── .env.example              # Environment variable template
 ├── requirements.txt          # Python dependencies
 └── DISCLAIMER.md             # Legal disclaimer
+```
 
 ---
 
@@ -164,4 +168,5 @@ for full details.
 ## Author
 
 **Lalith**
+Cloud Security Engineer (Transitioning)
 [GitHub](https://github.com/Lalith012)
