@@ -1,0 +1,10 @@
+{
+  "scenario": "CloudTrail Disable Attempt",
+  "mitre_technique": "T1562.008",
+  "mitre_tactic": "Defense Evasion",
+  "trail_targeted": "detection-lab-trail",
+  "timestamp": "2026-05-20T21:21:32.770671",
+  "outcome": "Logged by CloudTrail before stopping",
+  "guardduty_finding": "Stealth:IAMUser/CloudTrailLoggingDisabled",
+  "detection_time": "Immediate \u2014 GuardDuty real-time detection"
+}
