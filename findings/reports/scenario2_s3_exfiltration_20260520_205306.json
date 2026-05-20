@@ -1,0 +1,37 @@
+{
+  "acl_grants": 1,
+  "files_found": [
+    {
+      "key": "credentials/api-keys.txt",
+      "size": 113,
+      "last_modified": "2026-05-20 15:23:06+00:00"
+    },
+    {
+      "key": "employee-data/employees.csv",
+      "size": 79,
+      "last_modified": "2026-05-20 15:23:06+00:00"
+    },
+    {
+      "key": "financial/q4-revenue.txt",
+      "size": 81,
+      "last_modified": "2026-05-20 15:23:06+00:00"
+    }
+  ],
+  "exfiltrated": [
+    {
+      "file": "credentials/api-keys.txt",
+      "size": 113,
+      "preview": "SIMULATED FAKE CREDENTIALS - NOT REAL\napi_key=FAKE..."
+    },
+    {
+      "file": "employee-data/employees.csv",
+      "size": 79,
+      "preview": "id,name,salary,ssn\n1,John Smith,95000,123-45-6789\n..."
+    },
+    {
+      "file": "financial/q4-revenue.txt",
+      "size": 81,
+      "preview": "Q4 Revenue Report - CONFIDENTIAL\nTotal Revenue: $4..."
+    }
+  ]
+}
