@@ -14,11 +14,17 @@ GuardDuty specifically monitors for this behavior.
 ## Attack Flow
 
 Attacker gains access to AWS account
+
 → Identifies active CloudTrail trails
+
 → Attempts to stop logging
+
 → CloudTrail logs the StopLogging API call
+
 → GuardDuty raises high severity alert
+
 → Defender detects and re-enables logging
+
 → Full incident timeline preserved
 
 ## Why This Always Gets Detected
