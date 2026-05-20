@@ -149,7 +149,7 @@ copy .env.example .env
 | Phase | Description | Status |
 |---|---|---|
 | Phase 1 | Repository setup and documentation | ✅ Complete |
-| Phase 2 | CloudTrail and GuardDuty configuration | 🔄 In Progress |
+| Phase 2 | CloudTrail, Security Hub and Detection Engine | ✅ Complete |
 | Phase 3 | Attack simulation scenarios | ⏳ Pending |
 | Phase 4 | Python detection engine | ⏳ Pending |
 | Phase 5 | Sigma rules and Splunk integration | ⏳ Pending |
