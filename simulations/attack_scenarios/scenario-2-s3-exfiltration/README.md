@@ -13,10 +13,15 @@ lead to unauthorized data access and how CloudTrail detects it.
 ## Attack Flow
 
 Reconnaissance identifies S3 buckets
+
 → Check bucket ACL and policy
+
 → Discover misconfigured permissions
+
 → List bucket contents
+
 → Download sensitive files
+
 → CloudTrail logs all access events
 
 ## What Gets Detected
