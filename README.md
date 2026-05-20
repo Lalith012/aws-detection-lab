@@ -51,10 +51,10 @@ Splunk  -->  SIEM Visualization & Threat Hunting
 | Technique ID | Technique Name | Tactic | Detection Status |
 |---|---|---|---|
 | T1078.004 | Valid Accounts: Cloud Accounts | Initial Access | ✅ Detected |
-| T1530 | Data from Cloud Storage | Collection | 🔄 Phase 3 |
-| T1548 | Abuse Elevation Control | Privilege Escalation | 🔄 Phase 3 |
-| T1087.004 | Account Discovery: Cloud Account | Discovery | 🔄 Phase 3 |
-| T1562.008 | Impair Defenses: Disable Cloud Logs | Defense Evasion | 🔄 Phase 3 |
+| T1087.004 | Account Discovery: Cloud Account | Discovery | ✅ Simulated |
+| T1530 | Data from Cloud Storage | Collection | ✅ Simulated |
+| T1562.008 | Impair Defenses: Disable Cloud Logs | Defense Evasion | ✅ Simulated |
+| T1548 | Abuse Elevation Control | Privilege Escalation | ⏳ Phase 4 |
 
 ---
 
@@ -149,11 +149,11 @@ copy .env.example .env
 | Phase | Description | Status |
 |---|---|---|
 | Phase 1 | Repository setup and documentation | ✅ Complete |
-| Phase 2 | CloudTrail, Security Hub and Detection Engine | ✅ Complete |
-| Phase 3 | Attack simulation scenarios | ⏳ Pending |
-| Phase 4 | Python detection engine | ⏳ Pending |
+| Phase 2 | CloudTrail, Security Hub, Detection Engine | ✅ Complete |
+| Phase 3 | Attack simulation — IAM recon, S3 exfiltration, CloudTrail disable | ✅ Complete |
+| Phase 4 | Advanced Python detection engine | 🔄 In Progress |
 | Phase 5 | Sigma rules and Splunk integration | ⏳ Pending |
-| Phase 6 | Full documentation and diagrams | ⏳ Pending |
+| Phase 6 | Full documentation, diagrams, interview prep | ⏳ Pending |
 
 ---
 
