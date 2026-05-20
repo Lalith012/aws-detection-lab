@@ -50,11 +50,11 @@ Splunk  -->  SIEM Visualization & Threat Hunting
 
 | Technique ID | Technique Name | Tactic | Detection Status |
 |---|---|---|---|
-| T1078 | Valid Accounts | Initial Access | 🔄 In Progress |
-| T1530 | Data from Cloud Storage | Collection | 🔄 In Progress |
-| T1548 | Abuse Elevation Control | Privilege Escalation | 🔄 In Progress |
-| T1087 | Account Discovery | Discovery | 🔄 In Progress |
-| T1562 | Impair Defenses | Defense Evasion | 🔄 In Progress |
+| T1078.004 | Valid Accounts: Cloud Accounts | Initial Access | ✅ Detected |
+| T1530 | Data from Cloud Storage | Collection | 🔄 Phase 3 |
+| T1548 | Abuse Elevation Control | Privilege Escalation | 🔄 Phase 3 |
+| T1087.004 | Account Discovery: Cloud Account | Discovery | 🔄 Phase 3 |
+| T1562.008 | Impair Defenses: Disable Cloud Logs | Defense Evasion | 🔄 Phase 3 |
 
 ---
 
