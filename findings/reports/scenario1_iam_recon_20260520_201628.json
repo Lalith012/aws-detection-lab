@@ -1,0 +1,55 @@
+{
+  "identity": {
+    "account": "664858858896",
+    "user_id": "AIDAZVTFNCWIM4XN76TUQ",
+    "arn": "arn:aws:iam::664858858896:user/Lalith"
+  },
+  "users": [
+    {
+      "username": "Lalith",
+      "user_id": "AIDAZVTFNCWIM4XN76TUQ",
+      "arn": "arn:aws:iam::664858858896:user/Lalith",
+      "created": "2026-03-26 14:03:14+00:00"
+    }
+  ],
+  "roles": [
+    {
+      "name": "AWSServiceRoleForAmazonGuardDuty",
+      "arn": "arn:aws:iam::664858858896:role/aws-service-role/guardduty.amazonaws.com/AWSServiceRoleForAmazonGuardDuty",
+      "created": "2026-05-19 10:58:24+00:00"
+    },
+    {
+      "name": "AWSServiceRoleForAmazonGuardDutyMalwareProtection",
+      "arn": "arn:aws:iam::664858858896:role/aws-service-role/malware-protection.guardduty.amazonaws.com/AWSServiceRoleForAmazonGuardDutyMalwareProtection",
+      "created": "2026-05-19 10:58:25+00:00"
+    },
+    {
+      "name": "AWSServiceRoleForResourceExplorer",
+      "arn": "arn:aws:iam::664858858896:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+      "created": "2026-05-19 10:28:09+00:00"
+    },
+    {
+      "name": "AWSServiceRoleForSecurityHub",
+      "arn": "arn:aws:iam::664858858896:role/aws-service-role/securityhub.amazonaws.com/AWSServiceRoleForSecurityHub",
+      "created": "2026-05-20 12:01:37+00:00"
+    },
+    {
+      "name": "AWSServiceRoleForSupport",
+      "arn": "arn:aws:iam::664858858896:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport",
+      "created": "2026-03-25 15:14:41+00:00"
+    },
+    {
+      "name": "AWSServiceRoleForTrustedAdvisor",
+      "arn": "arn:aws:iam::664858858896:role/aws-service-role/trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisor",
+      "created": "2026-03-25 15:14:41+00:00"
+    }
+  ],
+  "policies": "access_denied",
+  "account_summary": {
+    "users_count": 1,
+    "groups_count": 1,
+    "roles_count": 6,
+    "policies_count": 1,
+    "mfa_enabled": 1
+  }
+}
