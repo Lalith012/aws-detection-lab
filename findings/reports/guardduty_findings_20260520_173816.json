@@ -1,0 +1,132 @@
+[
+  {
+    "AccountId": "664858858896",
+    "Arn": "arn:aws:guardduty:ap-south-1:664858858896:detector/f8cf1ff1835c1137f850dda85d39f774/finding/f4cf1ff64cfed723361cffaa3e4882f6",
+    "CreatedAt": "2026-05-19T11:08:51.069Z",
+    "Description": "The API GetPolicyVersion was invoked using root credentials from IP address 49.206.58.68.",
+    "Id": "f4cf1ff64cfed723361cffaa3e4882f6",
+    "Partition": "aws",
+    "Region": "us-east-1",
+    "Resource": {
+      "AccessKeyDetails": {
+        "AccessKeyId": "ASIAZVTFNCWILCR7VI62",
+        "PrincipalId": "664858858896",
+        "UserName": "aws-lalith-v9",
+        "UserType": "Root"
+      },
+      "ResourceType": "AccessKey"
+    },
+    "SchemaVersion": "2.0",
+    "Service": {
+      "Action": {
+        "ActionType": "AWS_API_CALL",
+        "AwsApiCallAction": {
+          "Api": "GetPolicyVersion",
+          "CallerType": "Remote IP",
+          "RemoteIpDetails": {
+            "City": {
+              "CityName": "Hyderabad"
+            },
+            "Country": {
+              "CountryName": "India"
+            },
+            "GeoLocation": {
+              "Lat": 17.3843,
+              "Lon": 78.4583
+            },
+            "IpAddressV4": "49.206.58.68",
+            "Organization": {
+              "Asn": "18209",
+              "AsnOrg": "Atria Convergence Technologies Ltd.",
+              "Isp": "ACT Fibernet",
+              "Org": "ACT Fibernet"
+            }
+          },
+          "ServiceName": "iam.amazonaws.com",
+          "AffectedResources": {}
+        }
+      },
+      "Archived": false,
+      "Count": 66,
+      "DetectorId": "f8cf1ff1835c1137f850dda85d39f774",
+      "EventFirstSeen": "2026-05-19T11:03:15.000Z",
+      "EventLastSeen": "2026-05-20T12:01:29.000Z",
+      "ResourceRole": "TARGET",
+      "ServiceName": "guardduty",
+      "AdditionalInfo": {
+        "Value": "{}",
+        "Type": "default"
+      },
+      "FeatureName": "CloudTrailManagementEvent"
+    },
+    "Severity": 2.0,
+    "Title": "The API GetPolicyVersion was invoked using root credentials.",
+    "Type": "Policy:IAMUser/RootCredentialUsage",
+    "UpdatedAt": "2026-05-20T12:07:08.605Z"
+  },
+  {
+    "AccountId": "664858858896",
+    "Arn": "arn:aws:guardduty:ap-south-1:664858858896:detector/f8cf1ff1835c1137f850dda85d39f774/finding/00cf1ff3f9d9ef5d82df0eab61c226b1",
+    "CreatedAt": "2026-05-19T11:03:46.355Z",
+    "Description": "The API ListNotificationHubs was invoked using root credentials from IP address 49.206.58.68.",
+    "Id": "00cf1ff3f9d9ef5d82df0eab61c226b1",
+    "Partition": "aws",
+    "Region": "ap-south-1",
+    "Resource": {
+      "AccessKeyDetails": {
+        "AccessKeyId": "ASIAZVTFNCWICEA3VKMF",
+        "PrincipalId": "664858858896",
+        "UserName": "aws-lalith-v9",
+        "UserType": "Root"
+      },
+      "ResourceType": "AccessKey"
+    },
+    "SchemaVersion": "2.0",
+    "Service": {
+      "Action": {
+        "ActionType": "AWS_API_CALL",
+        "AwsApiCallAction": {
+          "Api": "ListNotificationHubs",
+          "CallerType": "Remote IP",
+          "RemoteIpDetails": {
+            "City": {
+              "CityName": "Hyderabad"
+            },
+            "Country": {
+              "CountryName": "India"
+            },
+            "GeoLocation": {
+              "Lat": 17.3843,
+              "Lon": 78.4583
+            },
+            "IpAddressV4": "49.206.58.68",
+            "Organization": {
+              "Asn": "18209",
+              "AsnOrg": "Atria Convergence Technologies Ltd.",
+              "Isp": "ACT Fibernet",
+              "Org": "ACT Fibernet"
+            }
+          },
+          "ServiceName": "notifications.amazonaws.com",
+          "AffectedResources": {}
+        }
+      },
+      "Archived": false,
+      "Count": 31,
+      "DetectorId": "f8cf1ff1835c1137f850dda85d39f774",
+      "EventFirstSeen": "2026-05-19T10:58:26.000Z",
+      "EventLastSeen": "2026-05-20T11:41:45.000Z",
+      "ResourceRole": "TARGET",
+      "ServiceName": "guardduty",
+      "AdditionalInfo": {
+        "Value": "{}",
+        "Type": "default"
+      },
+      "FeatureName": "CloudTrailManagementEvent"
+    },
+    "Severity": 2.0,
+    "Title": "The API ListNotificationHubs was invoked using root credentials.",
+    "Type": "Policy:IAMUser/RootCredentialUsage",
+    "UpdatedAt": "2026-05-20T11:49:01.626Z"
+  }
+]
