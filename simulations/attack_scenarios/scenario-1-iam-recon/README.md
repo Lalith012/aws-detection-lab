@@ -14,21 +14,11 @@ privilege escalation paths.
 ## Attack Flow
 
 Initial Access (stolen credentials)
-|
-v
-GetCallerIdentity  →  Confirm identity
-|
-v
-ListUsers          →  Map all IAM users
-|
-v
-ListRoles          →  Find assumable roles
-|
-v
-ListPolicies       →  Identify permissions
-|
-v
-GetAccountSummary  →  Understand account scope
+→ GetCallerIdentity — Confirm identity
+→ ListUsers — Map all IAM users
+→ ListRoles — Find assumable roles
+→ ListPolicies — Identify permissions
+→ GetAccountSummary — Understand account scope
 
 ## What Gets Detected
 - CloudTrail logs every API call with timestamp and source IP
