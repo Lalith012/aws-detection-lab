@@ -243,3 +243,7 @@ __pycache__/
 # Project specific
 findings/screenshots/*.png
 findings/screenshots/*.jpg
+
+# Splunk data — raw logs, never commit
+splunk_data/
+*.json.gz

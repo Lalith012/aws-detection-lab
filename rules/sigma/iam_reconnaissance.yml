@@ -1,0 +1,41 @@
+title: AWS IAM Reconnaissance Activity
+id: b82b6b18-5c48-4f3b-cd9d-efe2345678bc
+status: experimental
+description: >
+    Detects IAM enumeration API calls indicating an attacker
+    is mapping the environment after gaining initial access.
+    Multiple IAM discovery calls in sequence indicate
+    credential reconnaissance — MITRE T1087.004.
+author: Lalith
+date: 2026-05-21
+references:
+    - https://attack.mitre.org/techniques/T1087/004/
+tags:
+    - attack.discovery
+    - attack.t1087.004
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+    selection:
+        eventSource: iam.amazonaws.com
+        eventName:
+            - ListUsers
+            - ListRoles
+            - ListPolicies
+            - GetAccountSummary
+            - ListAttachedUserPolicies
+            - ListUserPolicies
+    condition: selection
+falsepositives:
+    - Legitimate IAM auditing tools
+    - AWS Config service calls
+    - Security scanning tools
+level: medium
+fields:
+    - eventName
+    - userIdentity.userName
+    - userIdentity.type
+    - sourceIPAddress
+    - awsRegion
+    - eventTime

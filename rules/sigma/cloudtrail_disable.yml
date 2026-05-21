@@ -1,0 +1,36 @@
+title: AWS CloudTrail Logging Disabled
+id: a91a5a09-4b37-4f2a-bc8c-def1234567ab
+status: experimental
+description: >
+    Detects when AWS CloudTrail logging is disabled.
+    This is a classic defense evasion technique where an attacker
+    stops audit logging before conducting malicious activity.
+    CloudTrail logs the StopLogging event before stopping.
+author: Lalith
+date: 2026-05-21
+references:
+    - https://attack.mitre.org/techniques/T1562/008/
+    - https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html
+tags:
+    - attack.defense_evasion
+    - attack.t1562.008
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+    selection:
+        eventSource: cloudtrail.amazonaws.com
+        eventName:
+            - StopLogging
+            - DeleteTrail
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity
+    - Automated infrastructure teardown scripts
+level: critical
+fields:
+    - eventName
+    - userIdentity.userName
+    - sourceIPAddress
+    - awsRegion
+    - eventTime

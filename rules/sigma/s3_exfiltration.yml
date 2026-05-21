@@ -1,0 +1,40 @@
+title: AWS S3 Data Exfiltration Pattern
+id: c93c7c29-6d59-5a4c-de0e-faf3456789cd
+status: experimental
+description: >
+    Detects unusual S3 access patterns indicating potential
+    data exfiltration. Monitors for bucket enumeration and
+    bulk object downloads from S3 storage.
+    Maps to MITRE T1530 — Data from Cloud Storage.
+author: Lalith
+date: 2026-05-21
+references:
+    - https://attack.mitre.org/techniques/T1530/
+tags:
+    - attack.collection
+    - attack.t1530
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+    selection:
+        eventSource: s3.amazonaws.com
+        eventName:
+            - GetObject
+            - ListObjects
+            - ListObjectsV2
+            - GetBucketAcl
+            - GetBucketPolicy
+    condition: selection
+falsepositives:
+    - Legitimate backup operations
+    - Authorized data migration
+    - AWS service internal operations
+level: high
+fields:
+    - eventName
+    - userIdentity.userName
+    - sourceIPAddress
+    - requestParameters.bucketName
+    - awsRegion
+    - eventTime
