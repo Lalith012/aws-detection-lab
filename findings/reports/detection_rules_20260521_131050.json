@@ -1,0 +1,64 @@
+{
+  "report_time": "2026-05-21T13:10:50.748051+00:00",
+  "risk_score": 47.0,
+  "risk_level": "MEDIUM",
+  "rules_triggered": 2,
+  "findings": [
+    {
+      "rule_id": "DR-001",
+      "rule_name": "CloudTrail Logging Disabled",
+      "severity": "CRITICAL",
+      "confidence": "HIGH",
+      "mitre_technique": "T1562.008",
+      "mitre_tactic": "Defense Evasion",
+      "event_count": 1,
+      "triggered_at": "2026-05-21T13:10:50.739796+00:00",
+      "matched_events": [
+        {
+          "time": "2026-05-20T15:57:38Z",
+          "event": "StopLogging",
+          "mitre": "T1562.008 \u2014 Impair Defenses",
+          "user": "Lalith",
+          "source_ip": "49.206.58.68",
+          "user_agent": "Boto3/1.43.11 md/Botocore#1.43.11 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.14.5 md/pyimpl#CPython m/Z,D,b cfg/retry-mode#legacy Botocore/1.43.11",
+          "region": "ap-south-1",
+          "error": null
+        }
+      ],
+      "response": [
+        "Immediately re-enable CloudTrail logging",
+        "Rotate credentials of identity that disabled logging",
+        "Review all API calls in the disable window",
+        "Check for other indicators of compromise"
+      ]
+    },
+    {
+      "rule_id": "DR-002",
+      "rule_name": "IAM Reconnaissance Detected",
+      "severity": "MEDIUM",
+      "confidence": "MEDIUM",
+      "mitre_technique": "T1087.004",
+      "mitre_tactic": "Discovery",
+      "event_count": 1,
+      "triggered_at": "2026-05-21T13:10:50.739809+00:00",
+      "matched_events": [
+        {
+          "time": "2026-05-21T08:18:40Z",
+          "event": "ListPolicies",
+          "mitre": "T1087.004 \u2014 Account Discovery",
+          "user": "AssumedRole",
+          "source_ip": "resource-explorer-2.amazonaws.com",
+          "user_agent": "resource-explorer-2.amazonaws.com",
+          "region": "ap-south-1",
+          "error": null
+        }
+      ],
+      "response": [
+        "Review identity performing enumeration",
+        "Check if enumeration source IP is expected",
+        "Verify no privilege escalation followed",
+        "Consider implementing SCPs to restrict IAM enumeration"
+      ]
+    }
+  ]
+}
