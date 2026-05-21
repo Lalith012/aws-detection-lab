@@ -1,0 +1,28 @@
+{
+  "analysis_time": "2026-05-21T12:24:22.581049+00:00",
+  "time_window_hours": 24,
+  "total_events_processed": 1566,
+  "suspicious_events_found": 2,
+  "findings": [
+    {
+      "time": "2026-05-20T15:57:38Z",
+      "event": "StopLogging",
+      "mitre": "T1562.008 \u2014 Impair Defenses",
+      "user": "Lalith",
+      "source_ip": "49.206.58.68",
+      "user_agent": "Boto3/1.43.11 md/Botocore#1.43.11 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.14.5 md/pyimpl#CPython m/Z,D,b cfg/retry-mode#legacy Botocore/1.43.11",
+      "region": "ap-south-1",
+      "error": null
+    },
+    {
+      "time": "2026-05-21T08:18:40Z",
+      "event": "ListPolicies",
+      "mitre": "T1087.004 \u2014 Account Discovery",
+      "user": "AssumedRole",
+      "source_ip": "resource-explorer-2.amazonaws.com",
+      "user_agent": "resource-explorer-2.amazonaws.com",
+      "region": "ap-south-1",
+      "error": null
+    }
+  ]
+}
