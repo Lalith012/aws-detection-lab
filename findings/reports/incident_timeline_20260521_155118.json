@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-05-21T15:51:18.932185+00:00",
+  "total_events": 2,
+  "duration": "16:21:02",
+  "tactics_observed": [
+    "Defense Evasion",
+    "Discovery"
+  ],
+  "techniques_observed": [
+    "T1087.004",
+    "T1562.008"
+  ],
+  "identities_involved": [
+    "AssumedRole",
+    "Lalith"
+  ],
+  "source_ips": [
+    "resource-explorer-2.amazonaws.com",
+    "49.206.58.68"
+  ],
+  "events": [
+    {
+      "time": "2026-05-20T15:57:38Z",
+      "event": "StopLogging",
+      "user": "Lalith",
+      "source_ip": "49.206.58.68",
+      "error": null,
+      "rule_id": "DR-001",
+      "rule_name": "CloudTrail Logging Disabled",
+      "severity": "CRITICAL",
+      "mitre": "T1562.008",
+      "tactic": "Defense Evasion"
+    },
+    {
+      "time": "2026-05-21T08:18:40Z",
+      "event": "ListPolicies",
+      "user": "AssumedRole",
+      "source_ip": "resource-explorer-2.amazonaws.com",
+      "error": null,
+      "rule_id": "DR-002",
+      "rule_name": "IAM Reconnaissance Detected",
+      "severity": "MEDIUM",
+      "mitre": "T1087.004",
+      "tactic": "Discovery"
+    }
+  ]
+}

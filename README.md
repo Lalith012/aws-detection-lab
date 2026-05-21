@@ -151,8 +151,8 @@ copy .env.example .env
 | Phase 1 | Repository setup and documentation | ✅ Complete |
 | Phase 2 | CloudTrail, Security Hub, Detection Engine | ✅ Complete |
 | Phase 3 | Attack simulation — IAM recon, S3 exfiltration, CloudTrail disable | ✅ Complete |
-| Phase 4 | Advanced Python detection engine | 🔄 In Progress |
-| Phase 5 | Sigma rules and Splunk integration | ⏳ Pending |
+| Phase 4 | Advanced Python detection engine | ✅ Complete |
+| Phase 5 | Sigma rules and Splunk integration | 🔄 In Progress |
 | Phase 6 | Full documentation, diagrams, interview prep | ⏳ Pending |
 
 ---
