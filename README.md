@@ -55,31 +55,29 @@ The lab implements a complete detection pipeline:
 
 ## Repository Structure
 
-```
-aws-detection-lab/
-├── src/
-│   ├── detection_engine/     # Core detection logic
-│   ├── threat_hunting/       # Hunting scripts and notebooks
-│   └── utils/                # Shared utilities
-├── rules/
-│   ├── sigma/                # Sigma detection rules
-│   └── custom/               # Custom AWS-specific rules
-├── simulations/
-│   └── attack_scenarios/     # Documented attack simulations
-├── findings/
-│   ├── reports/              # Detection findings reports
-│   └── screenshots/          # Evidence screenshots
-├── diagrams/                 # Architecture diagrams
-├── docs/
-│   ├── setup-guide.md        # Environment setup instructions
-│   ├── architecture.md       # Detailed architecture decisions
-│   ├── attack-scenarios.md   # Attack simulation documentation
-│   └── mitre-mapping.md      # Full MITRE ATT&CK mapping
-├── tests/                    # Unit tests
-├── .env.example              # Environment variable template
-├── requirements.txt          # Python dependencies
-└── DISCLAIMER.md             # Legal disclaimer
-```
+**src/detection_engine/** — Core detection logic (CloudTrail analyzer, rule engine, timeline builder)
+
+**src/threat_hunting/** — Threat hunting scripts and notebooks
+
+**rules/sigma/** — Sigma detection rules mapped to MITRE ATT&CK
+
+**simulations/attack_scenarios/** — Documented attack simulations (IAM recon, S3 exfiltration, CloudTrail disable)
+
+**findings/reports/** — Detection findings and JSON evidence files
+
+**findings/screenshots/** — Evidence screenshots including Splunk dashboard
+
+**diagrams/** — Architecture diagrams
+
+**docs/** — Full documentation (setup guide, architecture decisions, attack scenarios, MITRE mapping)
+
+**tests/** — Unit tests
+
+**.env.example** — Environment variable template
+
+**requirements.txt** — Python dependencies
+
+**DISCLAIMER.md** — Legal disclaimer
 
 ---
 
