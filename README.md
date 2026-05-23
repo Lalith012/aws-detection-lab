@@ -24,24 +24,19 @@
 
 ## Architecture
 
-```
-Attack Simulation Layer
-(Controlled TTPs on owned infrastructure)
-        |
-        v
-AWS CloudTrail  -->  Log Collection & API Activity Monitoring
-        |
-        v
-AWS GuardDuty  -->  Managed Threat Detection & Alerting
-        |
-        v
-AWS Security Hub  -->  Centralized Findings Aggregation
-        |
-        v
-Python Detection Engine  -->  boto3 + Custom Sigma Rules
-        |
-        v
-Splunk  -->  SIEM Visualization & Threat Hunting
+![Architecture Diagram](diagrams/architecture-diagram.png)
+
+The lab implements a complete detection pipeline:
+
+**Attack Layer** — Simulates real MITRE ATT&CK techniques on owned infrastructure
+
+**Collection Layer** — AWS CloudTrail captures all API activity, stored in S3
+
+**Detection Layer** — GuardDuty managed detection + custom Python detection engine with risk scoring
+
+**Analysis Layer** — Sigma rules converted to SPL, Splunk dashboard with live findings
+
+**Framework** — All detections mapped to MITRE ATT&CK techniques
 ```
 
 ---
