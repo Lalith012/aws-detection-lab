@@ -69,3 +69,19 @@ AzureActivity
 - spath required for nested JSON field extraction
 - All queries tested against real CloudTrail data
 - Sigma source rules in rules/sigma/ folder
+
+## DR-004 — Privilege Escalation Attempt
+**MITRE:** T1548 — Privilege Escalation
+**Severity:** High
+
+```spl
+index="cloudtrail-logs" | spath | search
+eventSource="iam.amazonaws.com"
+eventName IN ("AttachUserPolicy","AttachRolePolicy","PutUserPolicy","PutRolePolicy","CreateUser","AddUserToGroup")
+| table eventName, userIdentity.userName, sourceIPAddress,
+  requestParameters.userName, requestParameters.policyArn,
+  errorCode, eventTime
+```
+
+**Note:** errorCode field captures AccessDenied responses —
+failed attempts are equally important as successful ones.

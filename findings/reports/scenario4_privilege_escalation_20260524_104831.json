@@ -1,0 +1,27 @@
+{
+  "scenario": "Privilege Escalation",
+  "mitre_technique": "T1548",
+  "mitre_tactic": "Privilege Escalation",
+  "target_user": "Lalith",
+  "timestamp": "2026-05-24T10:48:39.666009+00:00",
+  "attack_results": {
+    "identity": {
+      "arn": "arn:aws:iam::664858858896:user/Lalith",
+      "account": "664858858896",
+      "user_id": "AIDAZVTFNCWIM4XN76TUQ"
+    },
+    "current_policies": [
+      "DetectionLabPolicy"
+    ],
+    "attach_admin": "BLOCKED \u2014 AccessDenied",
+    "create_backdoor": "BLOCKED \u2014 AccessDenied",
+    "inline_policy": "BLOCKED \u2014 AccessDenied"
+  },
+  "guardduty_finding": "UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration",
+  "cloudtrail_events": [
+    "AttachUserPolicy",
+    "CreateUser",
+    "PutUserPolicy"
+  ],
+  "detection_rule": "DR-004 \u2014 Privilege Escalation Attempt"
+}

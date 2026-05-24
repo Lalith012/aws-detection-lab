@@ -1,0 +1,42 @@
+title: AWS IAM Privilege Escalation Attempt
+id: d04d8d30-7e60-4b5d-ef1f-aba4567890de
+status: experimental
+description: >
+    Detects attempts to escalate privileges in AWS by attaching
+    high privilege policies, creating backdoor users, or injecting
+    inline policies. CloudTrail records both successful and failed
+    attempts — AccessDenied responses are themselves indicators
+    of compromise.
+author: Lalith
+date: 2026-05-24
+references:
+    - https://attack.mitre.org/techniques/T1548/
+tags:
+    - attack.privilege_escalation
+    - attack.t1548
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+    selection:
+        eventSource: iam.amazonaws.com
+        eventName:
+            - AttachUserPolicy
+            - AttachRolePolicy
+            - PutUserPolicy
+            - PutRolePolicy
+            - CreateUser
+            - AddUserToGroup
+    condition: selection
+falsepositives:
+    - Legitimate IAM administration by authorized personnel
+    - Automated infrastructure provisioning
+level: high
+fields:
+    - eventName
+    - userIdentity.userName
+    - sourceIPAddress
+    - requestParameters.userName
+    - requestParameters.policyArn
+    - errorCode
+    - eventTime
