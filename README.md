@@ -43,7 +43,7 @@ The lab implements a complete detection pipeline:
 
 ## MITRE ATT&CK Coverage
 
-| Technique ID | Technique Name | Tactic | Detection Status |
+| Technique ID    | Technique Name             | Tactic |        Detection Status |
 |-----------|--------------------------------|----------------|----------------------|
 | T1078.004 | Valid Accounts: Cloud Accounts | Initial Access | ✅ Detected + Splunk |
 | T1087.004 | Account Discovery: Cloud Account | Discovery | ✅ Detected + Splunk |
