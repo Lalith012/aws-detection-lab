@@ -49,7 +49,7 @@ The lab implements a complete detection pipeline:
 | T1087.004 | Account Discovery: Cloud Account | Discovery | ✅ Detected + Splunk |
 | T1530 | Data from Cloud Storage | Collection | ✅ Detected + Splunk |
 | T1562.008 | Impair Defenses: Disable Cloud Logs | Defense Evasion | ✅ Detected + Splunk |
-| T1548 | Abuse Elevation Control | Privilege Escalation | ⏳ Phase 6 |
+| T1548 | Abuse Elevation Control | Privilege Escalation | ✅ Simulated + Splunk |
 
 ---
 
