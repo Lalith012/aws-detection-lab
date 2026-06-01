@@ -1,6 +1,6 @@
 # AWS Detection Engineering & Threat Hunting Lab
 
-![Status](https://img.shields.io/badge/Status-Active%20Development-brightgreen)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![AWS](https://img.shields.io/badge/AWS-CloudTrail%20%7C%20GuardDuty%20%7C%20Security%20Hub-orange)
 ![Python](https://img.shields.io/badge/Python-3.14-blue)
 ![Framework](https://img.shields.io/badge/Framework-MITRE%20ATT%26CK-red)
